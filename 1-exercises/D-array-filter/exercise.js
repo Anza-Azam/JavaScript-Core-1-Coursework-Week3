@@ -6,12 +6,18 @@
   - Do not edit any of the existing code
 */
 
+
+//containsNull ? process.exit(1): console.log(pairs);
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-var pairsByIndex; // Complete this statement
+var pairsByIndex=pairsByIndexRaw.filter(function(a,index){
+  if (!a[index]) return pairs;
+  
+}); // Complete this statement
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
+
 
 var pairs = pairsByIndex.map(function (indexes) {
   var student = students[indexes[0]];
@@ -19,4 +25,4 @@ var pairs = pairsByIndex.map(function (indexes) {
   return [student, mentor];
 });
 
-console.log(pairs);
+console.log(pairsByIndex);

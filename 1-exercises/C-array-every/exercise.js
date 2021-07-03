@@ -4,12 +4,12 @@
 
 //var students = ["Austine", "Dany", "Swathi", "Daniel"];
 var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
-var group = ["Omar", "Austine", "Daniy", "Swathi", "Lesley", "Rukmini"];
-//var group = ["Austine", "Dany", "Swathi", "Daniel"];
+//var group = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
+var group = ["Austine", "Dany", "Swathi", "Daniel"];
 
-function onlyStudents(name,index)
+function onlyStudents(name)
 {
-return students[index].includes(name);
+return students.includes(name);
 } 
 var groupIsOnlyStudents=group.every(onlyStudents); // complete this statement
 
