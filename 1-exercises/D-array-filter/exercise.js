@@ -9,6 +9,8 @@
  * @format
  */
 
+
+//containsNull ? process.exit(1): console.log(pairs);
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
 function filterItems(items) {
@@ -19,6 +21,7 @@ var pairsByIndex = pairsByIndexRaw.filter(filterItems);
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
+
 
 var pairs = pairsByIndex.map(function (indexes) {
 	var student = students[indexes[0]];

@@ -8,7 +8,22 @@
 */
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+function ifMultiples(number){
+if (number%3===0)
+return 'Fizz';
+else if (number%5===0)
+return 'Buzz';
+else if (number%3===0&&number%5===0)
+return 'FizzBuzz';
+}
 
+function a(name,index){
+  return name,index;
+  
+}
+var result=arr.map(ifMultiples).forEach(a);
+
+console.log(result);
 /* EXPECTED OUTPUT */
 
 /*

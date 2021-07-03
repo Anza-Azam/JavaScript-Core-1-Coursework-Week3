@@ -2,7 +2,9 @@
    This program should check if the array `group` contains only students
 */
 
+//var students = ["Austine", "Dany", "Swathi", "Daniel"];
 var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
+//var group = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
 var group = ["Austine", "Dany", "Swathi", "Daniel"];
 
 function onlyStudents(name)
