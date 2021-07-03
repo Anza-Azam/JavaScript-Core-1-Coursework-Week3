@@ -8,27 +8,28 @@ function double(number) {
 }
 
 var numbersDoubled = numbers.map(double);
+
+
+
+
+
+
+// var numbersDoubled = numbers.map(function double(number) {
+//   return number * 100;
+// });
+
+
+// var numbersDoubled = numbers.map(function (number) {
+//   return number * 100;
+// });
+
+
+
+
+// var numbersDoubled = numbers.map(number => {
+//   return number * 100;
+// });
+
+
+ //var numbersDoubled = numbers.map(number => number * 100);
 console.log(numbersDoubled);
-
-
-
-
-
-var numbersDoubled = numbers.map(function double(number) {
-  return number * 2;
-});
-
-
-var numbersDoubled = numbers.map(function (number) {
-  return number * 2;
-});
-
-
-
-
-var numbersDoubled = numbers.map(number => {
-  return number * 2
-});
-
-
-var numbersDoubled = numbers.map(number => number * 2);
