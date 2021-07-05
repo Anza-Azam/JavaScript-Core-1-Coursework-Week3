@@ -11,7 +11,18 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function findSafeOxygenLevel() {}
+function findSafeOxygenLevel(levels) {
+  levels = levels.sort();
+  for (let i = 0; i < levels.length; i++) {
+    if (levels[i].endsWith("%")) {
+      levels[i] = levels[i].replace("%", "");
+      levels[i] = Number.parseFloat(levels[i]);
+      if (levels[i] > 19.5 && levels[i] < 23.5)
+        return `${levels[i]}%`;
+    }
+  }
+  
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
