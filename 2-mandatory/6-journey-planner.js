@@ -20,8 +20,8 @@
 function checkCodeIsThere(stringText) {
   let magicWord = "code";
   //edit code below
-  if (stringText) {
-    return stringText;
+  if (stringText.includes('code')) {
+    return stringText.indexOf('code');
   } else {
     return "Not found";
   }
@@ -64,7 +64,12 @@ function checkCodeIsThere(stringText) {
   
   Hint: Use the corresponding array method to split the array.
 */
-function getTransportModes() {}
+function getTransportModes(location) {
+
+    location= location.slice(1,location.length);
+
+  return location;
+}
 
 /*
   Implement the function isAccessibleByTransportMode that
@@ -81,7 +86,20 @@ function getTransportModes() {}
     
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
-function isAccessibleByTransportMode() {}
+function isAccessibleByTransportMode(location,isAccessible) {
+  let arr = location.slice(1, location.length);
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i].includes(isAccessible)) {
+      return true;
+    }
+     else return false; 
+
+    }
+
+  }
+
+
+
 
 /*
   Implement the function getLocationName that
