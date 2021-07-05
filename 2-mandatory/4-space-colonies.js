@@ -15,7 +15,14 @@
   
 */
 
-function getSettlers() {}
+function getSettlers(voyagers) {
+  const colonisers = [];
+  for (var i = 0; i < voyagers.length; i++) {
+    if (voyagers[i].startsWith('A')&&voyagers[i].includes('family'))
+colonisers.push(voyagers[i]);
+  }
+  return colonisers;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
