@@ -111,7 +111,13 @@ function isAccessibleByTransportMode(location, isAccessible) {
    - Returns the name of the location
       e.g: "Tower Bridge"
 */
-function getLocationName() {}
+function getLocationName(location) {
+
+  return location[0];
+
+
+
+}
 
 /*
  We arrived at the final method. it won't take long if you use the previously implemented functions wisely.
@@ -140,8 +146,17 @@ function getLocationName() {}
    
   Advanced challange: try to use arrow function when invoking an array method.
 */
-function journeyPlanner(locations, transportMode) {
-  // Implement the function body
+function journeyPlanner(locations,transportMode) {
+   // Implement the function body
+  var a = [];
+
+ const result = locations.filter(word => word.includes(transportMode));
+  for (let i = 0; i < result.length; i++) {
+    a.push(result[i][0]);
+  }
+
+  return a;
+
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
