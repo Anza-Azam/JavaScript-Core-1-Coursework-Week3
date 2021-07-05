@@ -86,15 +86,16 @@ function getTransportModes(location) {
     
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
-function isAccessibleByTransportMode(location,isAccessible) {
-  let arr = location.slice(1, location.length);
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i].includes(isAccessible)) {
+function isAccessibleByTransportMode(location, isAccessible) {
+  
+  const even = (element) => element === isAccessible;
+  
+   if  (location.some(even)) {
       return true;
     }
      else return false; 
 
-    }
+    
 
   }
 

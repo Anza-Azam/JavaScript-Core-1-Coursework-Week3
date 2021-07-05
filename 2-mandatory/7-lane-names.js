@@ -6,7 +6,26 @@
   HINT: string and array methods that could be helpful (indexOf, filter)
 */
 
-function getLanes() {}
+function getLanes(streetNames) {
+  // var a = [];
+  // for (var i = 0; i < streetNames.length; i++) {
+  //   if (streetNames[i].includes('Lane'))
+  //     a.push(streetNames[i]);
+  // }
+  
+
+  const result = streetNames.filter(word => word.includes('Lane'));
+  console.log(result);
+return result;
+
+  
+  
+  // return a;
+
+
+}
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
