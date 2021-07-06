@@ -9,21 +9,16 @@
  * @format
  */
 
+const pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-//containsNull ? process.exit(1): console.log(pairs);
-var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
+const pairsByIndex = pairsByIndexRaw.filter(
+	(element) => Array.isArray(element) && element.length === 2
+);
 
-function filterItems(items) {
-	if (Array.isArray(items)) if (items.length > 1) return items;
-}
+const students = ["Islam", "Lesley", "Harun", "Rukmini"];
+const mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
-var pairsByIndex = pairsByIndexRaw.filter(filterItems);
-
-var students = ["Islam", "Lesley", "Harun", "Rukmini"];
-var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
-
-
-var pairs = pairsByIndex.map(function (indexes) {
+const pairs = pairsByIndex.map(function (indexes) {
 	var student = students[indexes[0]];
 	var mentor = mentors[indexes[1]];
 	return [student, mentor];
