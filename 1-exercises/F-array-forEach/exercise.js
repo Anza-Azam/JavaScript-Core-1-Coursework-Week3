@@ -11,7 +11,7 @@ const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
 
 
-const namesFormatted = array.map(element => element % 3 === 0 && element % 5 === 0 ? "\'FizzBuzz\'" : element % 3 === 0 ? "\'Fizz\'" : element % 5 === 0 ? "\'Buzz\'" : element).forEach(function(number) { console.log(number)});
+const ifMultiples = array.map(element => element % 3 === 0 && element % 5 === 0 ? "\'FizzBuzz\'" : element % 3 === 0 ? "\'Fizz\'" : element % 5 === 0 ? "\'Buzz\'" : element).forEach(function(number) { console.log(number)});
 
 
 
