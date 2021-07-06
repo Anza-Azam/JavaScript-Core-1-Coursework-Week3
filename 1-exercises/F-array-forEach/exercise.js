@@ -7,24 +7,12 @@
   An array with numbers 1-15 has been provided.
 */
 
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-function ifMultiples(number){
-  if (number % 3 === 0 && number % 5 === 0)
-    return 'FizzBuzz';
-  else if (number % 3 === 0)
-    return 'Fizz';
-  else if (number % 5 === 0)
-    return 'Buzz';
-  else return number;
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-}
 
-function log(name) { 
-	console.log(name);
-}
 
-const namesFormatted = arr.map(ifMultiples);
-namesFormatted.forEach(log);
+const namesFormatted = array.map(element => element % 3 === 0 && element % 5 === 0 ? "\'FizzBuzz\'" : element % 3 === 0 ? "\'Fizz\'" : element % 5 === 0 ? "\'Buzz\'" : element).forEach(function(number) { console.log(number)});
+
 
 
 
