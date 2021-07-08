@@ -16,11 +16,7 @@
 */
 
 function getSettlers(voyagers) {
-  const colonisers = [];
-  for (var i = 0; i < voyagers.length; i++) {
-    if (voyagers[i].startsWith('A')&&voyagers[i].includes('family'))
-colonisers.push(voyagers[i]);
-  }
+  const colonisers = voyagers.filter(element=>element.startsWith('A')&&element.includes('family'));
   return colonisers;
 }
 
