@@ -8,36 +8,30 @@
 */
 
 function getEligibleStudents(students) {
-  let pass=[];
-  for (var i = 0; i < students.length; i++) {
-    if (students[i][1] >= 8) {
-      pass.push(students[i][0]);
-    }
-    }
-  return pass;
-
+	let eligibleStudents = [];
+	let passingThreshold = 8;
+	for (let i = 0; i < students.length; i++) {
+		if (students[i][1] >= passingThreshold)
+     eligibleStudents.push(students[i][0]);
+	}
+	return eligibleStudents;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-test("getEligibleStudents function works", () => {
-  const attendance = [
-    ["Ahmed", 8],
-    ["Clement", 10],
-    ["Elamin", 6],
-    ["Adam", 7],
-    ["Tayoa", 11],
-    ["Nina", 10],
-  ];
-  expect(getEligibleStudents(attendance)).toEqual([
-    "Ahmed",
-    "Clement",
-    "Tayoa",
-    "Nina",
-  ]);
+test('getEligibleStudents function works', () => {
+	const attendance = [
+		[ 'Ahmed', 8 ],
+		[ 'Clement', 10 ],
+		[ 'Elamin', 6 ],
+		[ 'Adam', 7 ],
+		[ 'Tayoa', 11 ],
+		[ 'Nina', 10 ]
+	];
+	expect(getEligibleStudents(attendance)).toEqual([ 'Ahmed', 'Clement', 'Tayoa', 'Nina' ]);
 });
 
-test("getEligibleStudents function can return empty array", () => {
-  const attendance = [["Jacob", 7]];
-  expect(getEligibleStudents(attendance)).toEqual([]);
+test('getEligibleStudents function can return empty array', () => {
+	const attendance = [ [ 'Jacob', 7 ] ];
+	expect(getEligibleStudents(attendance)).toEqual([]);
 });
