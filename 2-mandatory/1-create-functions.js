@@ -10,7 +10,7 @@
 function first5(array) {
 	return array.slice(0, 5);
 }
-console.log(first5([1, 2, 3, 4, 5, 6, 7, 8]));
+
 
 /*
 Write a function that:

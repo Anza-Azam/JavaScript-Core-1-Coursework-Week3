@@ -12,17 +12,13 @@
 */
 
 function findSafeOxygenLevel(levels) {
-  levels = levels.sort();
-  for (let i = 0; i < levels.length; i++) {
-    if (levels[i].endsWith("%")) {
-      levels[i] = levels[i].replace("%", "");
-      levels[i] = Number.parseFloat(levels[i]);
-      if (levels[i] > 19.5 && levels[i] < 23.5)
-        return `${levels[i]}%`;
+   const filteredArray= levels.filter(element=>element.includes("%"));
+   const result = filteredArray.map(element=>element.replace("%",'')).map(Number);  
+   const safePlanet= result.find(element=>element>19.5 && element<23.5);
+    if (safePlanet)   
+    return `${safePlanet}%`;
     }
-  }
   
-}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
