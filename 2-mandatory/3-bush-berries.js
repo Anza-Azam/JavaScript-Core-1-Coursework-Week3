@@ -22,11 +22,12 @@
 */
 
 function isBushSafe(berryArray) {
+    //Write your code here
   isPink = (currentValue) => currentValue ==='pink';
 
-    return berryArray.every(isPink) ? "Bush is safe to eat from":"Toxic! Leave bush alone!"  ;
+  return berryArray.every(isPink) ? "Bush is safe to eat from":"Toxic! Leave bush alone!"  ;
 
-    //Write your code here
+  
   }
 
 
