@@ -16,7 +16,7 @@
 */
 
 function getSettlers(voyagers) {
-  const colonisers = voyagers.filter(element=>element.startsWith('A')&&element.includes('family'));
+  const colonisers = voyagers.filter(element=>element.startsWith('A')&&element.endsWith('family'));
   return colonisers;
 }
 
