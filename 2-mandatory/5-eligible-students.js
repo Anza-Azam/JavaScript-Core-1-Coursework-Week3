@@ -8,13 +8,15 @@
 */
 
 function getEligibleStudents(students) {
-	let eligibleStudents = [];
+	let eligibleStudents;
 	let passingThreshold = 8;
-	for (let i = 0; i < students.length; i++) {
-		if (students[i][1] >= passingThreshold)
-     eligibleStudents.push(students[i][0]);
-	}
-	return eligibleStudents;
+
+
+
+	eligibleStudents= students.filter(element=>element[1]>=passingThreshold);
+	return eligibleStudents.map(element=>element[0]);
+		
+	
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
