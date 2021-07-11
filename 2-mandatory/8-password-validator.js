@@ -26,23 +26,17 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 function validatePasswords(passwords) {
 
-  let compare = [];
-  let validPasswords = [];
- 
-  for (var i = 0; i < passwords.length; i++) {
-  
-    compare = passwords.slice(0, i);
-    if (compare.some((element) => element === passwords[i])) { validPasswords.push(false); }
-    else {
-      if (passwords[i].length >= 5 && containsLowercaseLetter(passwords[i]) && containsUppercaseLetter(passwords[i]) && containsNumber(passwords[i]) && containsSymbol(passwords[i])) {
-        validPasswords.push(true);
-      
-      }
-      else validPasswords.push(false);
-    }
+const validPasswords= passwords.map((element,index)=>element.length>=5&&
+  containsLowercaseLetter(element) &&
+   containsUppercaseLetter(element) &&
+   containsNumber(element) &&
+   containsSymbol(element)&&
+   passwords.indexOf(element) === index
+
+   )
+return validPasswords;
   }
-    return validPasswords;
- }
+
 
 // Returns true if string contains at least one uppercase letter.
 function containsUppercaseLetter(string) {
