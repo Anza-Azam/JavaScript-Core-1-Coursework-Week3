@@ -12,9 +12,10 @@
 */
 
 function findSafeOxygenLevel(levels) {
+  const minSafeLevel=19.5; const maxSafeLevel=23.5;
    const filteredArray= levels.filter(element=>element.includes("%"));
    const result = filteredArray.map(element=>element.replace("%",'')).map(Number);  
-   const safePlanet= result.find(element=>element>19.5 && element<23.5);
+   const safePlanet= result.find(element=>element>minSafeLevel && element<maxSafeLevel);
     if (safePlanet)   
     return `${safePlanet}%`;
     }
